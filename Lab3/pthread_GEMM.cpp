@@ -109,7 +109,7 @@ int main()
     stringstream ss;
     ss<<"echo '";
     ss<<"M="<<M<<",N="<<N<<",K="<<K<<"\t";
-    ss<<"threads="<<threadNum<<",time="<<double(duration.count())<<"ms";
+    ss<<"threads="<<threadNum<<",time="<<fixed<<double(duration.count())<<"ms";
     ss<<"' >> pth_GEMM.log";
     string cmd=ss.str();
     cout<<cmd<<endl;
