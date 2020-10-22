@@ -1,1 +1,10 @@
+#default: ignore files without ext
+*
+!*.*
+!*/
+#log file is for testing result print
 *.log
+#this location save vscode config, varies form machines
+.vscode/*
+#makefile may without ext
+!makefile
