@@ -7,7 +7,7 @@ all : $(targets)
 omp_GEMM : omp_GEMM.cpp matrix.hpp matrix.cpp
 	g++ omp_GEMM.cpp matrix.cpp -o omp_GEMM $(cflags)
 omp_schedule : omp_schedule.cpp matrix.hpp matrix.cpp
-	g++ omp_schedule.cpp matrix.cpp -o omp_GEMM $(cflags)
+	g++ omp_schedule.cpp matrix.cpp -o omp_schedule $(cflags)
 libpth4omp.so : pth4omp.hpp pth4omp.cpp
 	g++ pth4omp.cpp -o libpth4omp.so -fPIC -lpthread -shared
 pth4omp_GEMM : libpth4omp.so pth4omp_GEMM.cpp matrix.hpp matrix.cpp
