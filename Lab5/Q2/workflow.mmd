@@ -1,0 +1,21 @@
+sequenceDiagram
+    participant 0 as 主线程
+    participant 1 as 其他线程
+    note left of 0:初始化矩阵的边
+    note left of 0:计算平均值
+    note left of 0:初始化内部值
+    0->>1:广播矩阵
+    note left of 0:执行分块
+    0-->>1:发布分块任务
+    loop 直到误差小于epsilon
+        note over 0,1:计算一次迭代
+        1-->>0:返回计算结果
+        note left of 0:汇总结果
+        0->>1:广播矩阵
+        note over 0,1:计算误差值
+        1-->>0:返回误差值
+        note left of 0:判断是否打印/是否继续计算
+        0->>1:广播是否继续计算
+    end
+    note left of 0:打印最终结果
+    

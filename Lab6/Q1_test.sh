@@ -1,0 +1,28 @@
+#!/bin/bash
+
+nvcc CUDA_GEMM.cu check.cpp -o GEMM
+echo '32 512 512 512' | ./GEMM
+echo '32 1024 1024 1024' | ./GEMM
+echo '32 2048 2048 2048' | ./GEMM
+echo '32 4096 4096 4096' | ./GEMM
+echo '32 8192 8192 8192' | ./GEMM
+echo '64 512 512 512' | ./GEMM
+echo '64 1024 1024 1024' | ./GEMM
+echo '64 2048 2048 2048' | ./GEMM
+echo '64 4096 4096 4096' | ./GEMM
+echo '64 8192 8192 8192' | ./GEMM
+echo '128 512 512 512' | ./GEMM
+echo '128 1024 1024 1024' | ./GEMM
+echo '128 2048 2048 2048' | ./GEMM
+echo '128 4096 4096 4096' | ./GEMM
+echo '128 8192 8192 8192' | ./GEMM
+echo '256 512 512 512' | ./GEMM
+echo '256 1024 1024 1024' | ./GEMM
+echo '256 2048 2048 2048' | ./GEMM
+echo '256 4096 4096 4096' | ./GEMM
+echo '256 8192 8192 8192' | ./GEMM
+echo '512 512 512 512' | ./GEMM
+echo '512 1024 1024 1024' | ./GEMM
+echo '512 2048 2048 2048' | ./GEMM
+echo '512 4096 4096 4096' | ./GEMM
+echo '512 8192 8192 8192' | ./GEMM
